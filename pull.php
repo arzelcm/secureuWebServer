@@ -6,6 +6,7 @@ error_reporting(E_ALL);
 
 if (isset($_POST['payload'])) {
 	shell_exec("cd /var/www/html && git pull origin master && npm install");
+	echo "OK";
 }
 else {
 	echo "srry";
