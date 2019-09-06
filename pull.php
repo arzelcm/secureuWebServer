@@ -5,8 +5,8 @@ error_reporting(E_ALL);
 // Use in the “Post-Receive URLs” section of your GitHub repo.
 
 
-shell_exec("cd /var/www/html && git pull origin master && npm install");
+$output = shell_exec("cd /var/www/html && git pull origin master && npm install");
 
-echo "OK";
+echo $output;
 
 ?>
