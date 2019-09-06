@@ -7,6 +7,6 @@ error_reporting(E_ALL);
 
 $output = shell_exec("cd /var/www/html && git pull origin master && npm install");
 
-echo $output;
+echo json_encode(($output);
 
 ?>
