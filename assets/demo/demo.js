@@ -14,7 +14,7 @@ demo = {
   },
 
   initDocChart: function() {
-    chartColor = "#FFFFFF";
+    CHART_COLOR = "#FFFFFF";
 
     // General configuration for the charts with Line gradientStroke
     gradientChartOptionsConfiguration = {
@@ -74,7 +74,7 @@ demo = {
 
     gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
     gradientStroke.addColorStop(0, '#80b6f4');
-    gradientStroke.addColorStop(1, chartColor);
+    gradientStroke.addColorStop(1, CHART_COLOR);
 
     gradientFill = ctx.createLinearGradient(0, 170, 0, 50);
     gradientFill.addColorStop(0, "rgba(128, 182, 244, 0)");
@@ -106,7 +106,7 @@ demo = {
 
   initDashboardPageCharts: function() {
 
-    chartColor = "#FFFFFF";
+    CHART_COLOR = "#FFFFFF";
 
     // General configuration for the charts with Line gradientStroke
     gradientChartOptionsConfiguration = {
@@ -213,7 +213,7 @@ demo = {
 
     var gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
     gradientStroke.addColorStop(0, '#80b6f4');
-    gradientStroke.addColorStop(1, chartColor);
+    gradientStroke.addColorStop(1, CHART_COLOR);
 
     var gradientFill = ctx.createLinearGradient(0, 200, 0, 50);
     gradientFill.addColorStop(0, "rgba(128, 182, 244, 0)");
@@ -225,11 +225,11 @@ demo = {
         labels: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"],
         datasets: [{
           label: "Data",
-          borderColor: chartColor,
-          pointBorderColor: chartColor,
+          borderColor: CHART_COLOR,
+          pointBorderColor: CHART_COLOR,
           pointBackgroundColor: "#1e3d60",
           pointHoverBackgroundColor: "#1e3d60",
-          pointHoverBorderColor: chartColor,
+          pointHoverBorderColor: CHART_COLOR,
           pointBorderWidth: 1,
           pointHoverRadius: 7,
           pointHoverBorderWidth: 2,
@@ -306,7 +306,7 @@ demo = {
 
     gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
     gradientStroke.addColorStop(0, '#80b6f4');
-    gradientStroke.addColorStop(1, chartColor);
+    gradientStroke.addColorStop(1, CHART_COLOR);
 
     gradientFill = ctx.createLinearGradient(0, 170, 0, 50);
     gradientFill.addColorStop(0, "rgba(128, 182, 244, 0)");
@@ -340,7 +340,7 @@ demo = {
 
     gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
     gradientStroke.addColorStop(0, '#18ce0f');
-    gradientStroke.addColorStop(1, chartColor);
+    gradientStroke.addColorStop(1, CHART_COLOR);
 
     gradientFill = ctx.createLinearGradient(0, 170, 0, 50);
     gradientFill.addColorStop(0, "rgba(128, 182, 244, 0)");
