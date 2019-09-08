@@ -12,10 +12,11 @@ function getLogData() {
     }).done(function (data) {
         try {
             var dataParsed = JSON.parse(data);
+            printLogTable(dataParsed);
         } catch (e) {
+            console.log(e);
             document.getElementById("tableBody").innerText = "No es pot proporcionar la informació...";
         }
-        printLogTable(dataParsed);
     });
 }
 
