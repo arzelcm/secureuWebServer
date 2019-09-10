@@ -23,6 +23,8 @@
 
     <!-- CSS Custom -->
     <link rel="stylesheet" href="./assets/custom/css/people.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 </head>
 
 <body class="">
@@ -114,16 +116,51 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">
-                                Persones
-                            </h4>
+                            <div>
+                                <button type="button" class="btn btn-lg btn-primary btn-round add-person"
+                                        onclick="displayAddPersonRow();">
+                                    <i class="now-ui-icons ui-1_simple-add"></i>
+                                    Afegeix una persona
+                                </button>
+                            </div>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead class=" text-primary" id="tableHeader">
                                     </thead>
-                                    <tbody id="tableBody"></tbody>
+                                    <tbody id="tableBody">
+                                    <tr id="addPersonRow" class="animated bounceIn">
+                                        <td>
+                                            <div id="personImageBox"></div>
+                                            <input type="file" id="imageUploader" onchange="processImage(this.files)" accept="image/*" style="display: none">
+                                            <button class="btn btn-primary btn-round"
+                                                    onclick="initUploadImageProcess()" id="addImageButton">
+                                                <i class="mr-2 now-ui-icons design_image"></i>
+                                                Afegeix una foto
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control" id="nameInput" placeholder="Nom">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control" id="surnameInput" placeholder="Nom">
+                                        </td>
+                                        <td>
+                                            <!--There's nothing to select-->
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-round btn-success" onclick="sendNewPerson()">
+                                                <i class="mr-2 now-ui-icons ui-1_check"></i>
+                                                Guarda
+                                            </button>
+                                            <button class="btn btn-round btn-danger" onclick="hideAddPersonRow()">
+                                                <i class="mr-2 now-ui-icons ui-1_simple-remove"></i>
+                                                Elimina
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    </tbody>
                                 </table>
                             </div>
                         </div>

@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84ccbf5f-3c78-4bb9-bf48-b421d9523217" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/custom/css/people.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/custom/js/people.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/custom/js/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/custom/js/dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/custom/css/people.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/custom/css/people.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/custom/js/people.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/custom/js/people.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/people.html" beforeDir="false" afterPath="$PROJECT_DIR$/people.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/dist/" />
@@ -32,9 +31,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/people.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="24" column="63" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
+            <state relative-caret-position="500">
+              <caret line="146" column="120" selection-start-line="146" selection-start-column="120" selection-end-line="146" selection-end-column="120" />
               <folding>
+                <element signature="n#style#0;n#input#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#0;n#nav#0;n#div#0;n#footer#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -44,8 +44,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/custom/js/people.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="587">
+              <caret line="162" lean-forward="true" selection-start-line="162" selection-end-line="162" />
             </state>
           </provider>
         </entry>
@@ -53,8 +53,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/custom/css/people.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+            <state relative-caret-position="432">
+              <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -83,6 +83,12 @@
       <find>secure</find>
       <find>creative</find>
       <find>printL</find>
+      <find>Persones</find>
+      <find>tr id</find>
+      <find>animated bounceIn</find>
+      <find>persones</find>
+      <find>guarda</find>
+      <find>nameInput</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -99,14 +105,14 @@
         <option value="$PROJECT_DIR$/user.html" />
         <option value="$PROJECT_DIR$/dashboard.html" />
         <option value="$PROJECT_DIR$/assets/custom/js/dashboard.js" />
-        <option value="$PROJECT_DIR$/people.html" />
         <option value="$PROJECT_DIR$/assets/custom/css/people.css" />
+        <option value="$PROJECT_DIR$/people.html" />
         <option value="$PROJECT_DIR$/assets/custom/js/people.js" />
       </list>
     </option>
   </component>
   <component name="PhpDebugGeneral" listening_started="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="297" />
     <option name="y" value="56" />
     <option name="width" value="1400" />
@@ -117,17 +123,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="secureuWebServer" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="secureuWebServer" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -164,7 +160,17 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="secureuWebServer" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="secureuWebServer" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -213,18 +219,26 @@
       <workItem from="1567906755548" duration="1427000" />
       <workItem from="1567942849809" duration="1783000" />
       <workItem from="1567944650584" duration="1794000" />
-      <workItem from="1567946469019" duration="432000" />
+      <workItem from="1567946469019" duration="1031000" />
+      <workItem from="1568057128855" duration="1586000" />
+      <workItem from="1568059002055" duration="1801000" />
+      <workItem from="1568060826224" duration="1789000" />
+      <workItem from="1568062729065" duration="1939000" />
+      <workItem from="1568064688944" duration="84000" />
+      <workItem from="1568065508335" duration="1104000" />
+      <workItem from="1568067310620" duration="1814000" />
+      <workItem from="1568069142820" duration="1791000" />
+      <workItem from="1568070949011" duration="3886000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31395000" />
+    <option name="totallyTimeSpent" value="47788000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="71" y="31" width="1849" height="1049" extended-state="6" />
-    <editor active="true" />
+    <frame x="71" y="31" width="1849" height="1049" extended-state="7" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3390965" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3870608" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -391,27 +405,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/people.html">
+    <entry file="file://$PROJECT_DIR$/assets/custom/css/people.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
-          <caret line="24" column="63" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
+          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/people.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="146" column="120" selection-start-line="146" selection-start-column="120" selection-end-line="146" selection-end-column="120" />
           <folding>
+            <element signature="n#style#0;n#input#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#0;n#nav#0;n#div#0;n#footer#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/custom/css/people.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/custom/js/people.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="587">
+          <caret line="162" lean-forward="true" selection-start-line="162" selection-end-line="162" />
         </state>
       </provider>
     </entry>

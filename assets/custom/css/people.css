@@ -1,3 +1,26 @@
 .profile-image {
     width: 86px;
 }
+
+.add-person {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.add-person i.now-ui-icons {
+    margin-right: 6px;
+}
+
+#addPersonRow {
+    display: none;
+}
+
+#addPersonRow button {
+    margin: 36px 0;
+}
+
+button.inactive {
+    display: none;
+}
