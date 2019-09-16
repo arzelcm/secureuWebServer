@@ -137,29 +137,32 @@ function cleanAddPersonRow() {
 }
 
 function sendNewPerson() {
-    $.ajax({
-        method: "GET",
-        url: "http://3.14.150.169:8080/sendNewPerson",
-        data: getNewPersonData()
-    }).fail(function (e) {
-        document.getElementById("tableBody").innerText = "Hi ha problemes amb la connexió, si us plau, contacteu amb l'administrador."
-        console.log("Problemes de connexió: " + e);
-    }).done(function (response) {
-        alert(response);
-        /*try {
-            var dataParsed = JSON.parse(data);
-            createPeopleTable(dataParsed);
-        } catch (e) {
-            console.log(e);
-            document.getElementById("tableBody").innerText = "No es pot proporcionar la informació...";
-        }*/
-   });
+    if (document.getElementById("imageUploader").files.length !== 0){
+        $.ajax({
+            method: "GET",
+            url: "http://3.14.150.169:8080/sendNewPerson",
+            data: getNewPersonData()
+        }).fail(function (e) {
+            document.getElementById("tableBody").innerText = "Hi ha problemes amb la connexió, si us plau, contacteu amb l'administrador."
+            console.log("Problemes de connexió: " + JSON.stringify(e));
+        }).done(function (response) {
+            alert(response);
+            if (response.trim() === "S'ha afegit correctament") {
+                location.reload()
+            }
+        });
+    }
+    else {
+        alert("Has de pujar una imatge de la persona per a poder completar la funcionalitat");
+    }
 }
 
 function getNewPersonData() {
-    let image = document.getElementsByClassName("personImg")[0].src; //If any multiple file, will get first
-    let name = document.getElementById("nameInput").value.trim();
-    let surname = document.getElementById("surnameInput").value.trim();
+    const name = document.getElementById("nameInput").value.trim();
+    const surname = document.getElementById("surnameInput").value.trim();
+    const image = document.getElementsByClassName("personImg")[0].src; //If any multiple file, will get first
+
+
 
     return data = {
         image: image,
