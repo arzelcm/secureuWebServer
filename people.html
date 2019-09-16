@@ -108,34 +108,40 @@
                                     </thead>
                                     <tbody id="tableBody">
                                     <tr id="addPersonRow" class="animated bounceIn">
-                                        <td>
-                                            <div id="personImageBox"></div>
-                                            <input type="file" id="imageUploader" onchange="processImage(this.files)" accept="image/*" style="display: none">
-                                            <button class="btn btn-primary btn-round"
-                                                    onclick="initUploadImageProcess()" id="addImageButton">
-                                                <i class="mr-2 now-ui-icons design_image"></i>
-                                                Afegeix una foto
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <input type="text" class="form-control" id="nameInput" placeholder="Nom">
-                                        </td>
-                                        <td>
-                                            <input type="text" class="form-control" id="surnameInput" placeholder="Cognoms">
-                                        </td>
-                                        <td>
-                                            <!--There's nothing to select-->
-                                        </td>
-                                        <td>
-                                            <button class="btn btn-round btn-success" onclick="sendNewPerson()">
-                                                <i class="mr-2 now-ui-icons ui-1_check"></i>
-                                                Guarda
-                                            </button>
-                                            <button class="btn btn-round btn-danger" onclick="hideAddPersonRow()">
-                                                <i class="mr-2 now-ui-icons ui-1_simple-remove"></i>
-                                                Elimina
-                                            </button>
-                                        </td>
+                                        <form enctype="multipart/form-data" id="newPersonForm">
+                                            <td>
+                                                <div id="personImageBox"></div>
+                                                <input type="file" id="imageUploader"
+                                                       onchange="processImage(this.files)" accept="image/*"
+                                                       style="display: none">
+                                                <button class="btn btn-primary btn-round"
+                                                        onclick="initUploadImageProcess()" id="addImageButton">
+                                                    <i class="mr-2 now-ui-icons design_image"></i>
+                                                    Afegeix una foto
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" id="nameInput"
+                                                       placeholder="Nom">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" id="surnameInput"
+                                                       placeholder="Cognoms">
+                                            </td>
+                                            <td>
+                                                <!--There's nothing to select-->
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-round btn-success" onclick="sendNewPerson()">
+                                                    <i class="mr-2 now-ui-icons ui-1_check"></i>
+                                                    Guarda
+                                                </button>
+                                                <button class="btn btn-round btn-danger" onclick="hideAddPersonRow()">
+                                                    <i class="mr-2 now-ui-icons ui-1_simple-remove"></i>
+                                                    Elimina
+                                                </button>
+                                            </td>
+                                        </form>
                                     </tr>
                                     </tbody>
                                 </table>

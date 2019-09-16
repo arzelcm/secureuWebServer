@@ -56,7 +56,6 @@ function createPeopleTable(data) {
 
         tableBody.appendChild(row);
     }
-    console.log(i);
 }
 
 function getHeadersRow(columnsName) {
@@ -89,7 +88,9 @@ function hideAddPersonRow() {
     }, 400);
 }
 
-function initUploadImageProcess() {
+function initUploadImageProcess(e) {
+    const imageUploader = document.getElementById("imageUploader");
+    e.preventDefault();
     imageUploader.click();
 
 }
@@ -139,7 +140,7 @@ function cleanAddPersonRow() {
 function sendNewPerson() {
     if (document.getElementById("imageUploader").files.length !== 0){
         $.ajax({
-            method: "GET",
+            method: "POST",
             url: "http://3.14.150.169:8080/sendNewPerson",
             data: getNewPersonData()
         }).fail(function (e) {
@@ -158,7 +159,11 @@ function sendNewPerson() {
 }
 
 function getNewPersonData() {
-    const name = document.getElementById("nameInput").value.trim();
+
+    const newPersonForm = document.getElementById("myform");
+    const formObject = new FormData(newPersonForm);
+
+    /*const name = document.getElementById("nameInput").value.trim();
     const surname = document.getElementById("surnameInput").value.trim();
     const image = document.getElementsByClassName("personImg")[0].src; //If any multiple file, will get first
 
@@ -168,5 +173,12 @@ function getNewPersonData() {
         image: image,
         name: name,
         surname: surname
-    }
+    }*/
+    console.log(JSON.stringify(formObject));
+    return formObject;
+}
+
+document.getElementById("newPersonForm").onsubmit = function (e) {
+    e.preventDefault();
+    alert("Submitting")
 }
