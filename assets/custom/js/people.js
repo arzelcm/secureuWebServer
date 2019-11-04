@@ -1,3 +1,5 @@
+const newPersonForm = document.getElementById("newPersonForm");
+
 function getPeopleData() {
     $.ajax({
         method: "GET",
@@ -37,7 +39,7 @@ function createPeopleTable(data) {
             if (columnName == "photo") {
                 if (value != null && value !== "") {
                     var image = new Image();
-                    image.src = value;
+                    image.src = "http://3.14.150.169" + value;
                     image.classList.add("profile-image");
 
                     field.appendChild(image);
@@ -84,7 +86,7 @@ function hideAddPersonRow() {
         addPersonRow.classList.remove('bounceOut');
     });
     addPersonRow.classList.add('bounceIn');
-    setTimeout(function(){
+    setTimeout(function () {
         cleanAddPersonRow();
     }, 400);
 }
@@ -137,9 +139,11 @@ function cleanAddPersonRow() {
 }
 
 function sendNewPerson() {
-    if (document.getElementById("imageUploader").files.length !== 0){
+    if (document.getElementById("imageUploader").files.length !== 0) {
+        //newPersonForm.submit();
+        alert("Submitting");
         $.ajax({
-            method: "GET",
+            method: "POST",
             url: "http://3.14.150.169:8080/sendNewPerson",
             data: getNewPersonData()
         }).fail(function (e) {
@@ -151,17 +155,17 @@ function sendNewPerson() {
                 location.reload()
             }
         });
-    }
-    else {
+    } else {
         alert("Has de pujar una imatge de la persona per a poder completar la funcionalitat");
     }
+
 }
 
 function getNewPersonData() {
-    const name = document.getElementById("nameInput").value.trim();
+    const newPersonFormObject = new FormData(newPersonForm);
+    /* const name = document.getElementById("nameInput").value.trim();
     const surname = document.getElementById("surnameInput").value.trim();
     const image = document.getElementsByClassName("personImg")[0].src; //If any multiple file, will get first
-
 
 
     return data = {
@@ -169,4 +173,11 @@ function getNewPersonData() {
         name: name,
         surname: surname
     }
+    */
+    return newPersonFormObject;
 }
+
+newPersonForm.onsubmit = function (e) {
+    e.preventDefault();
+}
+
