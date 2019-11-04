@@ -37,7 +37,7 @@ function createPeopleTable(data) {
             if (columnName == "photo") {
                 if (value != null && value !== "") {
                     var image = new Image();
-                    image.src = value;
+                    image.src = "http://3.14.150.169" + value;
                     image.classList.add("profile-image");
 
                     field.appendChild(image);

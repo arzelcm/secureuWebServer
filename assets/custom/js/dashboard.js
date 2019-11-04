@@ -118,8 +118,8 @@ function initDashboardChart(data) {
 function printLogTable(data) {
     var tableBody = document.getElementById("tableBody");
     var tableHeader = document.getElementById("tableHeader");
-    var columns = ["name", "device", "log_type", "log_date"];
-    var columnsName = ["Nom", "Dispositiu", "Tipus", "Data"];
+    var columns = ["name", "device", "log_type", "log_date", "coincidence"];
+    var columnsName = ["Nom", "Dispositiu", "Tipus", "Data", "Coincidència"];
 
     tableHeader.appendChild(getHeadersRow(columnsName)); // Fa l'append de l'element tr creat a la funció
 
@@ -165,10 +165,10 @@ function getMainChartData() {
 
 function dataGestionsForMainChart(data) {
     var outputData = [];
-    
+
     for (var i = DAYS_TO_SUBSTRACT_FROM_DATE; i >= 0; i--) {
         var logs = [];
-        
+
         for (var j = 0; j < data.length; j++) {
             if (parseInt(data[j].date_diff) == i) {
                 logs.push(data[j]);
