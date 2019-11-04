@@ -19,8 +19,8 @@ function getPeopleData() {
 function createPeopleTable(data) {
     const tableBody = document.getElementById("tableBody");
     const tableHeader = document.getElementById("tableHeader");
-    const columns = ["photo", "name", "device", "date", "actions"];
-    const columnsName = ["Foto", "Nom", "Dispositiu", "Data", ""];
+    const columns = ["photo", "name", "device", "date"];
+    const columnsName = ["Foto", "Nom", "Dispositiu", "Data"];
 
 
     tableHeader.appendChild(getHeadersRow(columnsName)); // Fa l'append de l'element tr creat a la funció
@@ -45,8 +45,6 @@ function createPeopleTable(data) {
                     continue fieldsLoop;
                 } else content = "No té foto";
 
-            } else if (columnName == "actions") {
-                content = "Here go the actions for each row ";
             } else {
                 content = value != null ? value : "Sense dades";
             }
