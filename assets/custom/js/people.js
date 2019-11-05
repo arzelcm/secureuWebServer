@@ -157,11 +157,7 @@ function sendNewPerson() {
 }
 
 function getNewPersonData() {
-
-    const newPersonForm = document.getElementById("myform");
-    const formObject = new FormData(newPersonForm);
-
-    /*const name = document.getElementById("nameInput").value.trim();
+    const name = document.getElementById("nameInput").value.trim();
     const surname = document.getElementById("surnameInput").value.trim();
     const image = document.getElementsByClassName("personImg")[0].src; //If any multiple file, will get first
 
@@ -171,9 +167,7 @@ function getNewPersonData() {
         image: image,
         name: name,
         surname: surname
-    }*/
-    console.log(JSON.stringify(formObject));
-    return formObject;
+    }
 }
 
 document.getElementById("newPersonForm").onsubmit = function (e) {
